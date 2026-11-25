@@ -22,9 +22,14 @@
   const topo = $('.topo');
   const barra = $('.barra');
   const marco = $('.hero, .capa');
+  let ultimo = 0;
   const aoRolar = () => {
     const limite = marco ? marco.offsetHeight - 90 : 40;
     topo.classList.toggle('papel', scrollY > Math.max(40, limite));
+    // no celular o cabeçalho some ao descer e volta ao subir, para sobrar tela
+    const desce = scrollY > ultimo + 6 && scrollY > 500, sobe = scrollY < ultimo - 6;
+    if (innerWidth < 1024 && !document.body.classList.contains('preso')) { if (desce) topo.classList.add('some'); else if (sobe || scrollY < 500) topo.classList.remove('some'); } else topo.classList.remove('some');
+    ultimo = scrollY;
     if (barra) barra.classList.toggle('visivel', scrollY > (marco ? marco.offsetHeight * 0.7 : 300) && !document.body.classList.contains('preso'));
   };
   addEventListener('scroll', aoRolar, { passive: true });
@@ -65,7 +70,7 @@
   const lista = $('.aulas.do-dia');
   const mostraDia = (dia) => {
     abas.forEach((b) => b.setAttribute('aria-selected', String(Number(b.dataset.dia) === dia)));
-    lista.innerHTML = (GRADE[dia] || []).map(([hora, v]) => `<li class="aula${v === 0 ? ' cheia' : ''}"><time>${hora}</time><p>Hot Pilates<small>50 min · com Adelly</small></p>${v === 0 ? '<span class="vagas">Lista de espera</span>' : `<button class="btn menor" data-reservar data-dia="${dia}" data-hora="${hora}">${v === 1 ? 'Última vaga' : 'Reservar'}</button>`}</li>`).join('');
+    lista.innerHTML = (GRADE[dia] || []).map(([hora, v]) => `<li class="aula${v === 0 ? ' cheia' : ''}"><time>${hora}</time><p>Hot Pilates<small>50 min · Adelly</small><span class="tapetes" aria-hidden="true">${Array.from({ length: 13 }, (_, k) => `<i${k < 13 - v ? ' class="on"' : ''}></i>`).join('')}</span></p>${v === 0 ? '<span class="vagas">Lista de espera</span>' : `<button class="btn menor" data-reservar data-dia="${dia}" data-hora="${hora}">${v === 1 ? 'Última vaga' : 'Reservar'}</button>`}</li>`).join('');
   };
   if (abas.length && lista) {
     const hoje = new Date().getDay();

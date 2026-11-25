@@ -481,3 +481,92 @@ p { text-wrap: pretty; }
 
 .folha header { min-height: 2.75rem; }
 .folha header > div[hidden] + .x { margin-left: auto; }
+
+/* acabamento ----------------------------------------------------------- */
+::selection { background: var(--carmim); color: var(--creme); }
+.depo blockquote, .receios h3 { text-indent: -.42em; }
+.aula time, .grade button b, .opcoes b, .plano .valor, .oferta .preco, .avulsos em { font-variant-numeric: lining-nums tabular-nums; }
+.topo { transition: background .35s, color .35s, box-shadow .35s, transform .45s var(--saida); }
+.topo.some { transform: translateY(-105%); }
+@media (hover: hover) {
+  .metodo .foto img { transition: transform 1.2s var(--saida); }
+  .metodo li:hover .foto img { transform: scale(1.045); }
+  .servicos li { transition: padding-left .4s var(--saida); }
+  .servicos li:hover { padding-left: .6rem; }
+}
+@media (max-width: 22rem) { :root { --t-display: 2.5rem; } }
+
+/* terceira rodada: pesquisa de design ---------------------------------- */
+:root { --sem: "Albert Sans", "Avenir Next", "Segoe UI", system-ui, sans-serif; --mono: "DM Mono", ui-monospace, "SF Mono", Menlo, monospace; --raio: 3px; }
+body { line-height: 1.55; }
+/* voz dos fatos: rótulos e dados em mono */
+.rotulo, .depo cite, .semana button small, .grade h3, .etapas li, .rodape h3, .palavras-lista button small, .compara thead th, .carta .grupo, .carta .selo, .aula-tempo time {
+  font-family: var(--mono); font-weight: 400; letter-spacing: .05em; text-transform: uppercase; font-size: .72rem; font-style: normal; }
+.aula p small, .aula .vagas, .grade button small, .agora, .opcoes small, .legenda, .barra p, .hero .nota, .miudo, .fatos span { font-family: var(--mono); letter-spacing: -.01em; }
+.aula p small, .grade button small, .opcoes small, .aula .vagas { font-size: .78rem; }
+.agora { font-size: .82rem; } .legenda, .hero .nota, .miudo { font-size: .8rem; line-height: 1.5; } .fatos span { font-size: .8rem; }
+.aula-tempo time { color: var(--acento); font-size: .78rem; }
+.btn { font-weight: 500; letter-spacing: 0; }
+.btn:active { transform: scale(.97); }
+@media (hover: hover) { .btn:not(.claro):not(.linha):hover { background: var(--carmim); } }
+/* cabeçalho: a palavra Menu */
+.abre { width: auto; height: 2.75rem; padding: 0 .1rem 0 .55rem; margin-right: 0; border-radius: 0; font: 500 .95rem/1 var(--sem); }
+.topo .lado { gap: .35rem; }
+/* ritmo das faixas */
+.sec.curta { padding-block: clamp(2.2rem, 1.6rem + 3vw, 4.5rem); }
+.sec.longa { padding-block: calc(var(--secao) * 1.18); }
+.cab.dupla { align-items: end; }
+.conduz h2 { margin-top: 1.1rem; }
+/* chama no lugar do ponto */
+.agora .chama { width: .68rem; height: .94rem; background: var(--champ); flex: none; -webkit-mask: url(../img/logo-chama.png) center / contain no-repeat; mask: url(../img/logo-chama.png) center / contain no-repeat; }
+/* os 13 tapetes da sala */
+.tapetes { display: flex; gap: 3px; margin-top: .5rem; color: var(--carmim); }
+.tapetes i { width: 5px; height: 5px; border-radius: 50%; background: currentColor; opacity: .2; }
+.tapetes i.on { opacity: 1; }
+.aula.cheia .tapetes, .grade button.cheia .tapetes { color: var(--tinta-2); }
+.grade button .tapetes { margin: .45rem 0 .3rem; }
+@media (hover: hover) { .grade button:not(.cheia):hover .tapetes { color: var(--champ); } }
+.aula { align-items: start; }
+.aula time { padding-top: .1rem; }
+.aula .btn, .aula > .vagas { align-self: center; }
+/* benefícios sem numeração */
+.beneficios li { grid-template-columns: 1fr; }
+.beneficios li::before { content: none; }
+.beneficios p { grid-column: 1; }
+/* carta de preços */
+.carta .grupo { color: var(--tinta-2); padding-bottom: .9rem; border-bottom: 1px solid var(--fio); }
+.carta ul + .grupo { margin-top: 3rem; }
+.carta li { display: grid; grid-template-columns: 1fr auto; gap: .35rem 1rem; align-items: center; padding-block: 1.35rem; border-bottom: 1px solid var(--fio); }
+.carta .nome { display: flex; flex-wrap: wrap; align-items: center; gap: .5rem .8rem; }
+.carta h3 { font-size: clamp(1.55rem, 1.35rem + .9vw, 2.2rem); }
+.carta .selo { padding: .32rem .6rem; border-radius: 999px; background: var(--vinho-800); color: var(--creme); font-size: .66rem; }
+.carta .det { grid-column: 1 / -1; color: var(--tinta-2); font-size: var(--t-menor); max-width: 30em; }
+.carta .valor { grid-row: 1; grid-column: 2; text-align: right; font: 400 clamp(1.7rem, 1.4rem + 1.2vw, 2.5rem)/1 var(--serifa); letter-spacing: -.03em; font-variant-numeric: lining-nums tabular-nums; white-space: nowrap; }
+.carta .valor small { display: block; font: 400 .72rem/1.2 var(--mono); letter-spacing: 0; color: var(--tinta-2); margin-top: .3rem; text-transform: none; }
+.carta .btn { grid-column: 1 / -1; justify-self: start; margin-top: .6rem; }
+@media (min-width: 64rem) {
+  .carta li { grid-template-columns: minmax(0, 4fr) minmax(0, 5fr) minmax(0, 2.2fr) auto; gap: 2rem; padding-block: 1.6rem; }
+  .carta .det, .carta .valor, .carta .btn { grid-column: auto; grid-row: auto; margin: 0; }
+  .carta .btn { justify-self: end; }
+}
+/* movimento: uma entrada no topo, fotos que se abrem, e mais nada */
+@media (prefers-reduced-motion: no-preference) {
+  .js .rv:not(.foto) { opacity: 1; transform: none; transition: none; }
+  .hero-texto > * { animation-duration: .7s; }
+  .hero-texto > :nth-child(2) { animation-delay: .07s; } .hero-texto > :nth-child(3) { animation-delay: .14s; } .hero-texto > :nth-child(4) { animation-delay: .21s; } .hero-texto > :nth-child(5) { animation-delay: .28s; }
+  .agora { animation-duration: .7s; animation-delay: .35s; }
+  .hero-foto img { animation-duration: 1.6s; }
+  .js .foto.rv { transition: clip-path .9s var(--saida); }
+  .js .foto.rv img { transition: transform 1.2s var(--saida); }
+}
+
+/* acerto da voz mono: só em dado curto; leitura volta para a sem serifa */
+.fatos span, .hero .nota, .legenda, .miudo, .barra p, .aula p small, .semana button small { font-family: var(--sem); letter-spacing: 0; text-transform: none; }
+.fatos span { font-size: var(--t-menor); }
+.hero .nota, .legenda, .miudo { font-size: .86rem; }
+.aula p small { font-size: .84rem; white-space: nowrap; }
+.semana button small { font-size: .7rem; white-space: nowrap; }
+.aula .vagas { white-space: nowrap; font-size: .7rem; text-transform: uppercase; letter-spacing: .04em; }
+.aula.cheia { grid-template-columns: auto 1fr; }
+.aula.cheia > .vagas { grid-column: 2; margin-top: -.5rem; }
+.barra p { font-size: .82rem; }
