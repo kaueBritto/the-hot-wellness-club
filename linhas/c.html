@@ -8,16 +8,19 @@
 <style>
 *{box-sizing:border-box;margin:0;padding:0;font-variant-numeric:lining-nums!important}
 html{-webkit-text-size-adjust:100%}
-body{-webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility;overflow-x:hidden}
 img{display:block;max-width:100%}a{color:inherit;text-decoration:none;cursor:pointer}ul,ol{list-style:none}
 svg.i{width:24px;height:24px;fill:none;stroke:currentColor;stroke-width:1.2;stroke-linecap:round;stroke-linejoin:round;flex:none}
-.troca{position:fixed;left:50%;bottom:14px;transform:translateX(-50%);z-index:90;display:flex;gap:2px;padding:4px;border-radius:999px;background:rgba(20,1,3,.82);backdrop-filter:blur(10px);font:500 11px/1 system-ui,sans-serif;letter-spacing:.08em}
-.troca a{display:grid;place-items:center;min-width:34px;height:30px;padding:0 10px;border-radius:999px;color:#EBD3C0;text-decoration:none}.troca a.on{background:#E0B394;color:#210104}
-
-:root{--n0:#160103;--n1:#220205;--n2:#33050A;--champ:#E0B394;--luz:#F6D6B8;--fg:#EED8C7;--fg2:#B99484;--fio:rgba(224,179,148,.2);--s:'Cormorant Garamond',Georgia,serif;--t:'Jost',system-ui,sans-serif}
-body{background:#0E0102;color:var(--fg);font:400 15.5px/1.55 var(--t)}
+:root{--n0:#160103;--champ:#E0B394;--luz:#F6D6B8;--tit:#F8E6D8;--fg:#EED8C7;--fg2:#B99484;--fio:rgba(224,179,148,.15);--s:'Cormorant Garamond',Georgia,serif;--t:'Jost',system-ui,sans-serif}
+body{background:#0E0102;color:var(--fg);font:400 15.5px/1.55 var(--t);-webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility;overflow-x:hidden}
 .pg{max-width:480px;margin:0 auto;background:var(--n0);position:relative;overflow:hidden}
+.troca{position:fixed;left:50%;bottom:14px;transform:translateX(-50%);z-index:90;display:flex;gap:2px;padding:4px;border-radius:999px;background:rgba(20,1,3,.82);backdrop-filter:blur(10px);font:500 11px/1 system-ui,sans-serif;letter-spacing:.08em}
+.troca a{display:grid;place-items:center;min-width:34px;height:30px;padding:0 10px;border-radius:999px;color:#EBD3C0}.troca a.on{background:#E0B394;color:#210104}
+
+/* a linha de luz: o único enfeite da página */
 .led{display:block;height:1px;border:0;background:linear-gradient(90deg,transparent,var(--luz) 16%,var(--luz) 84%,transparent);box-shadow:0 0 18px 1px rgba(246,196,152,.55),0 0 4px rgba(255,228,204,.9)}
+.led.c{width:64px;margin:0 auto;box-shadow:0 0 14px 1px rgba(246,196,152,.45),0 0 3px rgba(255,228,204,.8)}
+
+/* primeira tela (aprovada: não mexer) */
 .topo{position:absolute;left:0;right:0;top:0;z-index:5;display:flex;align-items:center;justify-content:space-between;padding:22px 24px}
 .topo img{height:21px;width:auto}
 .menu{display:flex;align-items:center;gap:10px;font:500 11px/1 var(--t);letter-spacing:.2em;text-transform:uppercase;color:var(--fg)}
@@ -25,95 +28,93 @@ body{background:#0E0102;color:var(--fg);font:400 15.5px/1.55 var(--t)}
 .hero{position:relative;min-height:max(680px,100svh);display:flex;flex-direction:column;align-items:center;text-align:center;padding:118px 26px 0;background:radial-gradient(90% 46% at 50% 30%,#4A040E 0,#220205 60%,var(--n0) 100%)}
 .kick{display:inline-flex;align-items:center;gap:12px;font:500 10.5px/1 var(--t);letter-spacing:.34em;text-transform:uppercase;color:var(--champ)}
 .kick img{height:17px;width:auto}
-h1{font:300 clamp(48px,14.4vw,66px)/.96 var(--s);letter-spacing:-.02em;margin-top:26px;color:#F8E6D8}
-h1 em{font-style:italic;font-weight:400;color:var(--champ)}
+h1{font:300 clamp(48px,14.4vw,66px)/.96 var(--s);letter-spacing:-.02em;margin-top:26px;color:var(--tit)}
+h1 em,h2 em{font-style:italic;font-weight:400;color:var(--champ)}
 .sub{margin-top:20px;max-width:19em;color:var(--fg2)}
 .btn{display:inline-flex;align-items:center;justify-content:center;gap:12px;height:54px;padding:0 28px;font:500 12px/1 var(--t);letter-spacing:.18em;text-transform:uppercase;border-radius:1px;background:var(--champ);color:#210104;box-shadow:0 0 0 1px rgba(246,214,184,.5),0 10px 44px -6px rgba(240,184,140,.55)}
 .hero .btn{margin-top:30px}
 .sala{position:relative;width:calc(100% + 52px);margin:44px -26px 0;flex:1;min-height:250px}
 .sala img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:50% 40%;-webkit-mask-image:linear-gradient(180deg,transparent 0,#000 34%,#000 78%,transparent 100%);mask-image:linear-gradient(180deg,transparent 0,#000 34%,#000 78%,transparent 100%)}
 .sala .led{position:absolute;left:10%;right:10%;top:0}
-.sec{position:relative;padding:90px 24px 0}
-.sec.g1{background:radial-gradient(80% 36% at 100% 22%,rgba(114,7,23,.5),transparent 70%)}
-.sec.g2{background:radial-gradient(80% 40% at 0% 40%,rgba(114,7,23,.42),transparent 70%)}
-.rot{display:flex;align-items:center;justify-content:center;gap:14px;font:500 10.5px/1 var(--t);letter-spacing:.34em;text-transform:uppercase;color:var(--champ)}
-.rot::before,.rot::after{content:"";width:26px;height:1px;background:var(--fio)}
-h2{font:300 clamp(34px,10.2vw,44px)/1.02 var(--s);letter-spacing:-.015em;text-align:center;margin-top:20px;color:#F8E6D8}
-h2 em{font-style:italic;font-weight:400;color:var(--champ)}
-.texto{margin:16px auto 0;max-width:20em;text-align:center;color:var(--fg2)}
-.trilha{position:relative;margin-top:34px;padding-left:28px}
-.trilha::before{content:"";position:absolute;left:5px;top:10px;bottom:10px;width:1px;background:linear-gradient(180deg,var(--luz) 0,var(--luz) 12%,rgba(224,179,148,.22) 26%,rgba(224,179,148,.22) 100%);box-shadow:0 0 10px rgba(246,196,152,.35)}
-.trilha li{position:relative;display:flex;align-items:baseline;justify-content:space-between;gap:12px;padding:13px 0}
-.trilha li::before{content:"";position:absolute;left:-27px;top:50%;width:9px;height:9px;margin-top:-5px;border-radius:50%;background:var(--n0);box-shadow:inset 0 0 0 1px rgba(224,179,148,.5)}
-.trilha b{font:300 31px/1 var(--s);color:rgba(238,216,199,.5)}
-.trilha i{font:500 10px/1 var(--t);font-style:normal;letter-spacing:.22em;text-transform:uppercase;color:rgba(185,148,132,.8)}
-.trilha .on::before{background:var(--luz);box-shadow:0 0 14px 3px rgba(246,196,152,.75)}
-.trilha .on b{color:#F8E6D8;font-weight:400}
-.trilha .on i{color:var(--champ)}
-.painel{position:relative;border:1px solid var(--fio);border-radius:3px;background:linear-gradient(180deg,rgba(255,255,255,.055),rgba(255,255,255,.015))}
-.painel::before{content:"";position:absolute;left:14%;right:14%;top:-1px;height:1px;background:linear-gradient(90deg,transparent,var(--luz),transparent);opacity:.8}
-.foto{position:relative;margin-top:34px;border-radius:3px;overflow:hidden}
-.foto img{width:100%;aspect-ratio:1/1.05;object-fit:cover;object-position:50% 30%}
-.foto::after{content:"";position:absolute;inset:0;box-shadow:inset 0 0 0 1px var(--fio);background:linear-gradient(180deg,transparent 60%,rgba(22,1,3,.7))}
-.foto figcaption{position:absolute;left:16px;bottom:14px;z-index:1;font:500 10px/1 var(--t);letter-spacing:.24em;text-transform:uppercase;color:var(--fg)}
-.fatos{display:grid;grid-template-columns:repeat(3,1fr);margin-top:26px}
-.fatos div{padding:4px 8px;text-align:center}
-.fatos div+div{border-left:1px solid var(--fio)}
-.fatos b{display:block;font:300 50px/1 var(--s);background:linear-gradient(180deg,#FBE9DA,var(--champ) 70%,#B98568);-webkit-background-clip:text;background-clip:text;color:transparent}
-.fatos span{display:block;margin-top:8px;font-size:12px;line-height:1.35;color:var(--fg2)}
-.quem{display:flex;align-items:center;gap:16px;margin-top:30px;padding:16px 18px}
-.quem img{width:66px;height:66px;border-radius:50%;object-fit:cover;object-position:64% 32%;flex:none;box-shadow:0 0 0 1px var(--fio)}
-.quem small{font:500 10px/1 var(--t);letter-spacing:.24em;text-transform:uppercase;color:var(--champ)}
-.quem b{display:block;font:400 25px/1.1 var(--s);margin:6px 0 2px;color:#F8E6D8}
-.quem span{font-size:13px;color:var(--fg2)}
-.oferta{margin-top:34px;padding:36px 24px 26px;border-radius:3px;background:linear-gradient(160deg,#F1CDB0,var(--champ) 55%,#CFA07F);color:#2C0205;text-align:center;box-shadow:0 0 70px -10px rgba(240,184,140,.5)}
-.oferta small{font:500 10.5px/1 var(--t);letter-spacing:.3em;text-transform:uppercase;color:#720717}
-.oferta .v{font:300 104px/.86 var(--s);letter-spacing:-.04em;margin:20px 0 14px}
-.oferta .v sup{font:400 26px/1.6 var(--s);letter-spacing:0;vertical-align:top;margin-right:6px}
-.oferta p{font-size:14px;line-height:1.5;color:#5A2A26;max-width:18em;margin:0 auto}
-.oferta .btn{margin-top:24px;width:100%;background:#2C0205;color:#F4E2D2;box-shadow:none}
-.dias{display:flex;gap:8px;margin:30px -24px 0;padding:0 24px;overflow-x:auto;scrollbar-width:none}
-.dias::-webkit-scrollbar{display:none}
-.dias span{flex:0 0 50px;height:72px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:7px;border:1px solid var(--fio);border-radius:2px;font:500 10px/1 var(--t);letter-spacing:.16em;text-transform:uppercase;color:var(--fg2)}
-.dias span b{font:400 24px/1 var(--s);letter-spacing:0;color:var(--fg)}
-.dias span.on{border-color:var(--luz);box-shadow:0 0 22px -4px rgba(246,196,152,.6),inset 0 0 18px -8px rgba(246,196,152,.6);color:var(--champ)}
-.aulas{display:grid;gap:10px;margin-top:16px}
-.aula{display:grid;grid-template-columns:auto 1fr;gap:0 16px;align-items:center;padding:20px 18px 16px 20px}
-.aula .h{font:300 34px/1 var(--s);color:#F8E6D8}
-.aula .n b{display:block;font:500 15.5px/1.2 var(--t);white-space:nowrap}
-.aula .n span{font-size:12.5px;color:var(--fg2)}
-.aula .bar{grid-column:1/-1;position:relative;height:1px;margin-top:16px;background:var(--fio)}
-.aula .bar i{position:absolute;left:0;top:0;bottom:0;background:var(--luz);box-shadow:0 0 10px rgba(246,196,152,.7)}
-.aula .mini{display:grid;place-items:center;height:42px;padding:0 13px;white-space:nowrap;font:500 10.5px/1 var(--t);letter-spacing:.16em;text-transform:uppercase;border-radius:1px;background:var(--champ);color:#210104}
-.aula.ch .mini{background:none;border:1px solid var(--fio);color:var(--fg)}
-.aula .pe{grid-column:1/-1;display:flex;align-items:center;justify-content:space-between;margin-top:14px}
-.aula em{font:500 10px/1 var(--t);font-style:normal;letter-spacing:.2em;text-transform:uppercase;color:var(--fg2)}
-.planos{display:grid;gap:10px;margin-top:32px}
-.plano{display:flex;align-items:flex-end;justify-content:space-between;gap:12px;padding:20px 20px 18px}
-.plano b{display:block;font:400 26px/1.05 var(--s);color:#F8E6D8}
-.plano span{display:block;margin-top:6px;font-size:12.5px;color:var(--fg2)}
-.plano em{font:300 36px/1 var(--s);font-style:normal;white-space:nowrap;color:var(--champ)}
-.plano em small{font:400 12px/1 var(--t);color:var(--fg2)}
-.plano.d{border-color:rgba(246,214,184,.7);box-shadow:0 0 44px -14px rgba(246,196,152,.6)}
-.plano.d small.tag{display:block;margin-bottom:10px;font:500 9.5px/1 var(--t);letter-spacing:.22em;text-transform:uppercase;color:var(--champ)}
-.sem{margin-top:22px;border-top:1px solid var(--fio)}
-.sem li{display:flex;align-items:baseline;justify-content:space-between;gap:12px;padding:15px 2px;border-bottom:1px solid var(--fio)}
-.sem b{font:400 22px/1 var(--s)}
-.sem b small{font:400 12.5px/1 var(--t);color:var(--fg2);margin-left:10px}
-.sem em{font:400 24px/1 var(--s);font-style:normal;color:var(--champ);white-space:nowrap}
-.sem em small{font:400 11.500px/1 var(--t);color:var(--fg2)}
-.depo{padding:96px 30px 0;text-align:center}
+
+/* seções do meio: mesmo desenho da primeira tela */
+.sec{position:relative;padding:124px 26px 0;text-align:center}
+.rot{font:500 10.5px/1 var(--t);letter-spacing:.34em;text-transform:uppercase;color:var(--champ)}
+h2{font:300 clamp(36px,10.6vw,46px)/1.02 var(--s);letter-spacing:-.015em;margin-top:22px;color:var(--tit)}
+.texto{margin:18px auto 0;max-width:19em;color:var(--fg2)}
+.mini{font:500 10px/1 var(--t);letter-spacing:.3em;text-transform:uppercase;color:var(--fg2)}
+
+/* o club */
+.vista{margin:44px -26px 0}
+.vista img{width:100%;aspect-ratio:16/10.4;object-fit:cover;-webkit-mask-image:linear-gradient(180deg,transparent 0,#000 26%,#000 74%,transparent 100%);mask-image:linear-gradient(180deg,transparent 0,#000 26%,#000 74%,transparent 100%)}
+.vista+.mini{margin-top:26px}
+.agora{font:300 48px/1 var(--s);letter-spacing:-.015em;color:var(--tit);margin:16px 0 24px}
+.led.c+.mini{margin-top:44px}
+.breve{margin-top:16px}
+.breve li{font:300 28px/1.42 var(--s);color:rgba(238,216,199,.4)}
+
+/* hot pilates */
+.vulto{margin:26px -26px 0}
+.vulto img{width:100%;aspect-ratio:1/1.14;object-fit:cover;object-position:42% 22%;-webkit-mask-image:radial-gradient(ellipse 60% 49% at 50% 50%,#000 38%,transparent 100%);mask-image:radial-gradient(ellipse 60% 49% at 50% 50%,#000 38%,transparent 100%)}
+.fatos{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin-top:8px}
+.fatos b{display:block;font:300 54px/1 var(--s);color:var(--champ)}
+.fatos span{display:block;margin:10px auto 0;max-width:8.5em;font-size:12px;line-height:1.4;color:var(--fg2)}
+.quem{margin-top:64px}
+.quem .led{margin-bottom:44px}
+.quem b{display:block;font:300 34px/1 var(--s);color:var(--tit);margin:14px 0 10px}
+.quem span{font-size:14px;color:var(--fg2)}
+
+/* primeira aula: só o número, aceso como a chama do fecho */
+.sec.aceso{padding-bottom:20px;background:radial-gradient(74% 46% at 50% 60%,rgba(74,4,14,.85),transparent 100%)}
+.valor{font:300 150px/.8 var(--s);letter-spacing:-.04em;color:var(--tit);margin:54px 0 34px;text-shadow:0 0 54px rgba(246,196,152,.32)}
+.valor sup{font:400 27px/1 var(--s);letter-spacing:0;vertical-align:top;position:relative;top:8px;margin-right:8px;color:var(--champ);text-shadow:none}
+.aceso .texto{margin-top:0}
+.aceso .btn{margin-top:30px}
+
+/* horários: sem caixas. O dia escolhido ganha uma linha de luz */
+.dias{display:flex;justify-content:space-between;margin-top:44px}
+.dias span{position:relative;flex:1;padding-bottom:14px;font:500 10px/1 var(--t);letter-spacing:.16em;text-transform:uppercase;color:rgba(185,148,132,.75)}
+.dias b{display:block;margin-top:9px;font:300 26px/1 var(--s);letter-spacing:0;color:rgba(238,216,199,.55)}
+.dias .on{color:var(--champ)}
+.dias .on b{color:var(--tit);font-weight:400}
+.dias .on::after{content:"";position:absolute;left:50%;bottom:0;width:22px;height:1px;margin-left:-11px;background:var(--luz);box-shadow:0 0 12px 1px rgba(246,196,152,.6)}
+.grade{margin-top:22px;text-align:left;border-bottom:1px solid var(--fio)}
+.grade li{display:grid;grid-template-columns:auto 1fr auto;align-items:center;gap:18px;padding:24px 0;border-top:1px solid var(--fio)}
+.grade .h{font:300 38px/1 var(--s);color:var(--tit)}
+.grade strong{display:block;font:500 15.5px/1.2 var(--t)}
+.grade small{display:block;margin-top:5px;font-size:13px;color:var(--fg2)}
+.grade small em{font-style:normal;color:var(--champ)}
+.grade a{display:grid;place-items:center;width:46px;height:46px;border-radius:50%;background:var(--champ);color:#210104}
+.grade a svg{width:19px;height:19px}
+.grade .ch .h{color:rgba(238,216,199,.5)}
+.grade .ch a{background:none;box-shadow:inset 0 0 0 1px rgba(224,179,148,.4);color:var(--champ)}
+.lk{display:inline-block;margin-top:30px;padding-bottom:9px;font:500 11px/1 var(--t);letter-spacing:.22em;text-transform:uppercase;color:var(--champ);border-bottom:1px solid rgba(224,179,148,.4)}
+
+/* planos: uma carta de preços */
+.carta{margin-top:44px;text-align:left;border-bottom:1px solid var(--fio)}
+.carta li{display:flex;align-items:baseline;justify-content:space-between;gap:14px;padding:22px 0 20px;border-top:1px solid var(--fio)}
+.carta b{font:300 29px/1 var(--s);color:var(--tit)}
+.carta b small{display:block;margin-top:9px;font:400 13px/1 var(--t);color:var(--fg2)}
+.carta em{font:300 34px/1 var(--s);font-style:normal;white-space:nowrap;color:var(--champ)}
+.carta em small{font:400 12px/1 var(--t);color:var(--fg2)}
+.carta+.mini{margin-top:54px}
+.carta.s{margin-top:18px}
+.carta.s li{padding:17px 0 15px}
+.carta.s b{font-size:23px}
+.carta.s em{font-size:25px}
+
+/* depoimento e fecho (aprovados) */
+.depo{padding:124px 30px 0;text-align:center}
+.depo blockquote{font:italic 300 30px/1.16 var(--s);color:var(--tit);margin:36px 0 22px}
+.depo cite{display:block;margin-bottom:36px;font:500 10.5px/1 var(--t);font-style:normal;letter-spacing:.26em;text-transform:uppercase;color:var(--champ)}
 .depo .led{width:120px;margin:0 auto}
-.depo blockquote{font:italic 300 30px/1.16 var(--s);color:#F8E6D8;margin:34px 0 22px}
-.depo cite{display:block;margin-bottom:34px;font:500 10.5px/1 var(--t);font-style:normal;letter-spacing:.26em;text-transform:uppercase;color:var(--champ)}
-.fecho{position:relative;margin-top:96px;padding:84px 24px 120px;text-align:center;background:radial-gradient(90% 60% at 50% 0,#4A040E,#220205 60%,var(--n0))}
+.fecho{position:relative;margin-top:110px;padding:84px 24px 120px;text-align:center;background:radial-gradient(90% 60% at 50% 0,#4A040E,#220205 60%,var(--n0))}
 .fecho>.led{position:absolute;left:0;right:0;top:0}
 .fecho img{height:60px;width:auto;margin:0 auto 26px;filter:drop-shadow(0 0 22px rgba(246,196,152,.55))}
 .fecho h2{margin:0}
 .fecho .btn{margin-top:30px}
 .fecho p{margin-top:44px;font:400 20px/1.3 var(--s)}
 .fecho p small{display:block;font:400 13px/1.5 var(--t);color:var(--fg2);margin-top:4px}
-
 </style></head><body>
 <div class="pg">
 <header class="topo"><img src="../img/logo-nome.png" alt="The Hot Wellness Club" width="1606" height="306"><span class="menu">Menu<i></i></span></header>
@@ -124,38 +125,51 @@ h2 em{font-style:italic;font-weight:400;color:var(--champ)}
   <a class="btn">Agendar aula experimental</a>
   <div class="sala"><img src="img/sala-noite.jpg" alt="Sala de aula com linhas de luz no teto"><hr class="led"></div>
 </section>
-<section class="sec g1">
+
+<section class="sec">
   <p class="rot">O club</p>
   <h2>Tudo no <em>mesmo endereço.</em></h2>
-  <ol class="trilha"><li class="on"><b>Hot Pilates</b><i>Aulas abertas</i></li><li><b>Pilates</b><i>Em breve</i></li><li><b>Recovery</b><i>Em breve</i></li><li><b>Massagem</b><i>Em breve</i></li><li><b>Fisioterapia</b><i>Em breve</i></li><li><b>Café</b><i>Em breve</i></li></ol>
+  <figure class="vista"><img src="img/recepcao.jpg" alt="Recepção do The Hot Wellness Club, com a logo na parede" loading="lazy"></figure>
+  <p class="mini">Aulas abertas</p>
+  <p class="agora">Hot Pilates</p>
+  <hr class="led c">
+  <p class="mini">Em breve</p>
+  <ul class="breve"><li>Pilates</li><li>Recovery</li><li>Massagem</li><li>Fisioterapia</li><li>Café</li></ul>
 </section>
-<section class="sec g2">
+
+<section class="sec">
   <p class="rot">Hot Pilates</p>
   <h2>A aula que deu <em>origem ao club.</em></h2>
-  <figure class="foto"><img src="img/prancha-noite.jpg" alt="Alunas em prancha na sala aquecida" loading="lazy"><figcaption>Sala aquecida · luz baixa · música alta</figcaption></figure>
+  <p class="texto">Sala aquecida, luz baixa e música alta.</p>
+  <figure class="vulto"><img src="img/pose-noite.jpg" alt="Aluna em alongamento na sala aquecida" loading="lazy"></figure>
   <div class="fatos"><div><b>13</b><span>alunas por turma</span></div><div><b>50</b><span>minutos de aula</span></div><div><b>1ª</b><span>brasileira certificada Inferno Hot Pilates</span></div></div>
-  <div class="quem painel"><img src="img/adelly-noite.jpg" alt="Adelly Stella" loading="lazy"><div><small>Quem conduz</small><b>Adelly Stella</b><span>Fisioterapeuta. Ensina pilates desde 2017.</span></div></div>
+  <div class="quem"><hr class="led c"><p class="mini">Quem conduz</p><b>Adelly Stella</b><span>Fisioterapeuta. Ensina pilates desde 2017.</span></div>
 </section>
-<section class="sec">
+
+<section class="sec aceso">
   <p class="rot">Primeira aula</p>
   <h2>Comece por <em>uma aula.</em></h2>
-  <div class="oferta"><small>Aula experimental</small><div class="v"><sup>R$</sup>60</div><p>Fechou o plano até o dia seguinte, o valor sai da primeira mensalidade.</p><a class="btn">Agendar aula experimental</a></div>
+  <div class="valor"><sup>R$</sup>60</div>
+  <p class="texto">Fechou o plano até o dia seguinte, o valor sai da primeira mensalidade.</p>
+  <a class="btn">Agendar aula experimental</a>
 </section>
-<section class="sec g1">
+
+<section class="sec">
   <p class="rot">Horários</p>
   <h2>Garanta a <em>sua vaga.</em></h2>
-  <div class="dias"><span class="on">Qui<b>26</b></span><span>Sex<b>27</b></span><span>Sáb<b>28</b></span><span>Seg<b>30</b></span><span>Ter<b>01</b></span><span>Qua<b>02</b></span><span>Qui<b>03</b></span></div>
-  <div class="aulas">
-    <div class="aula painel"><span class="h">18:20</span><div class="n"><b>Hot Pilates</b><span>50 min · com Adelly</span></div><div class="bar"><i style="width:85%"></i></div><div class="pe"><em>2 vagas</em><a class="mini">Reservar</a></div></div>
-    <div class="aula painel ch"><span class="h">19:30</span><div class="n"><b>Hot Pilates</b><span>50 min · com Adelly</span></div><div class="bar"><i style="width:100%"></i></div><div class="pe"><em>Turma cheia</em><a class="mini">Entrar na lista</a></div></div>
-  </div>
+  <div class="dias"><span class="on">Qui<b>26</b></span><span>Sex<b>27</b></span><span>Sáb<b>28</b></span><span>Seg<b>30</b></span><span>Ter<b>01</b></span><span>Qua<b>02</b></span></div>
+  <ul class="grade"><li><span class="h">18:20</span><div><strong>Hot Pilates</strong><small>50 min · <em>2 vagas</em></small></div><a aria-label="Reservar"><svg class="i" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12h15M14 7l5 5-5 5"/></svg></a></li><li class="ch"><span class="h">19:30</span><div><strong>Hot Pilates</strong><small>50 min · lista de espera</small></div><a aria-label="Entrar na lista de espera"><svg class="i" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12h15M14 7l5 5-5 5"/></svg></a></li></ul>
+  <a class="lk">Ver a semana inteira</a>
 </section>
-<section class="sec g2">
+
+<section class="sec">
   <p class="rot">Planos e valores</p>
   <h2>Uma, duas ou três <em>vezes por semana.</em></h2>
-  <div class="planos"><div class="plano painel"><div><b>1x por semana</b><span>4 aulas no mês</span></div><em><small>R$ </small>200</em></div><div class="plano painel"><div><b>2x por semana</b><span>8 aulas no mês</span></div><em><small>R$ </small>340</em></div><div class="plano painel d"><div><small class="tag">Mais completo</small><b>3x por semana</b><span>12 aulas no mês</span></div><em><small>R$ </small>530</em></div></div>
-  <ul class="sem"><li><b>Aula avulsa</b><em><small>R$ </small>60</em></li><li><b>Pacote de 4 aulas</b><em><small>R$ </small>220</em></li><li><b>Vale-presente</b><em><small>R$ </small>60</em></li></ul>
+  <ul class="carta"><li><b>1x por semana<small>4 aulas no mês</small></b><em><small>R$ </small>200</em></li><li><b>2x por semana<small>8 aulas no mês</small></b><em><small>R$ </small>340</em></li><li><b>3x por semana<small>12 aulas no mês</small></b><em><small>R$ </small>530</em></li></ul>
+  <p class="mini">Sem plano</p>
+  <ul class="carta s"><li><b>Aula avulsa</b><em><small>R$ </small>60</em></li><li><b>Pacote de 4 aulas</b><em><small>R$ </small>220</em></li><li><b>Vale-presente</b><em><small>R$ </small>60</em></li></ul>
 </section>
+
 <section class="depo">
   <hr class="led"><blockquote>“Comecei querendo me exercitar, mas acabei encontrando um ambiente com meninas extremamente acolhedoras.”</blockquote><cite>Veronica, aluna</cite><hr class="led">
 </section>
