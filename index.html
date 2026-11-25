@@ -4,14 +4,14 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>The Hot Wellness Club · Hot pilates e bem-estar em Aracaju</title>
-<meta name="description" content="Wellness club em Aracaju. A atividade principal é o hot pilates: sala aquecida, no máximo 13 alunas por turma e fisioterapeuta em cada aula. Aula experimental a R$ 60.">
+<meta name="description" content="Wellness club em Aracaju. Hot pilates em sala aquecida, com no máximo 13 alunas por turma e fisioterapeuta em cada aula. Aula experimental a R$ 60.">
 <meta name="robots" content="noindex, nofollow">
-<meta name="theme-color" content="#210104">
+<meta name="theme-color" content="#2C0205">
 <meta property="og:title" content="The Hot Wellness Club · Aracaju">
 <meta property="og:image" content="https://kauebritto.github.io/the-hot-wellness-club/img/f-pose.jpg">
 <link rel="icon" href="img/favicon.png" type="image/png">
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Jost:wght@400;500&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;1,400;1,500&family=Jost:wght@400;500&display=swap" rel="stylesheet">
 <link rel="preload" as="image" href="img/f-pose.jpg">
 <style>
 /* Desenho de aprovação do site The Hot Wellness Club. Não é o código do site. */
@@ -306,21 +306,14 @@ blockquote{font:500 31px/1.16 var(--serifa);font-style:italic;letter-spacing:-.0
 .pc-faixa a{margin-left:auto;font:500 12px/1 var(--sem);letter-spacing:.18em;text-transform:uppercase;color:var(--champ)}
 
 /* site publicado */
-:root{color-scheme:dark}
 body{background:#210104;overflow-x:hidden}
 h1,h2,h3,blockquote,.local{overflow-wrap:break-word}
 [hidden]{display:none!important}
 img{height:auto}
-.hero .foto::before{content:none}
-.hero{min-height:max(600px,calc(100svh - 84px));padding-top:96px}
-.hero h1{font-size:clamp(40px,12.4vw,50px);line-height:.98;margin:14px 0 16px}
-.sec h2{font-size:clamp(34px,10vw,40px)}
 .duvidas div:not(.aberta) p{display:none}
-[data-ir],[data-abre],[data-passo],[data-fecha],[data-rola],[data-demo],.abre,.dia,.filtros span,.abas span,.duvidas h3,.opcao,.passa span,.marca,.entrar,.wa{cursor:pointer;-webkit-tap-highlight-color:transparent}
-a:focus-visible,button:focus-visible{outline:2px solid #F4D2B4;outline-offset:3px}
-.fecho{padding-bottom:124px}
-.fecho img.th{width:auto}
-.rodape .fim img,.topo .marca img{width:auto}
+[data-ir],[data-abre],[data-passo],[data-fecha],[data-rola],[data-demo],.abre,.dia,.abas span,.duvidas h3,.opcao,.passa span,.marca,.entrar,.wa{cursor:pointer;-webkit-tap-highlight-color:transparent}
+a:focus-visible,button:focus-visible{outline:2px solid var(--rosa);outline-offset:3px}
+.rodape .fim img,.topo .marca img,.fecho img.th{width:auto}
 .folha{max-height:calc(100% - 70px);overflow-y:auto}
 .topo .acoes .btn{display:none}
 .barra{padding-bottom:calc(14px + env(safe-area-inset-bottom,0px))}
@@ -328,86 +321,160 @@ a:focus-visible,button:focus-visible{outline:2px solid #F4D2B4;outline-offset:3p
 .semana::-webkit-scrollbar{display:none}
 @media(prefers-reduced-motion:no-preference){.folha:not([hidden]){animation:sobe .28s ease-out}@keyframes sobe{from{transform:translateY(24px);opacity:.4}}}
 
-/* ---- as quatro cores do painel da marca: vinho, carmim, rosa e champanhe ---- */
-:root{--v700:#4A040E;--carmim:#720717;--rosa:#AC5D57;--champ:#E0B394;--rosa-texto:#96463F}
-/* a foto do topo, mais sóbria: o vinho fundo toma mais da foto */
-.hero .foto::after{background:linear-gradient(180deg,rgba(33,1,4,.72) 0,rgba(33,1,4,.2) 22%,rgba(33,1,4,.4) 44%,rgba(33,1,4,.92) 66%,#210104 90%)}
-/* faixa em champanhe logo abaixo da primeira tela */
-.proxima{background:var(--champ);color:var(--v950)}
-.proxima small{color:var(--carmim)}
-.proxima .pisca{background:var(--carmim);box-shadow:0 0 0 4px rgba(114,7,23,.16)}
-.proxima a{border-color:rgba(51,4,10,.45);color:var(--v950)}
-/* faixas de destaque */
-.sec.carmim{--fundo:#5F0613;--fg:var(--champ-claro);--fg2:#EBC6B2;--linha:rgba(242,221,202,.28);--acento:var(--champ);--cartao:rgba(0,0,0,.14);--botao:var(--champ);--botao-fg:var(--v950)}
-.sec.carmim::after{mix-blend-mode:screen;opacity:.12}
-.sec.carmim .faixa-foto::after{background:linear-gradient(180deg,rgba(33,1,4,.3),rgba(74,4,14,.42) 50%,#5F0613)}
-.sec.champ{--fundo:var(--champ);--fg:var(--tinta);--fg2:#6B3A36;--linha:rgba(51,4,10,.24);--acento:var(--carmim);--cartao:rgba(255,255,255,.28);--botao:var(--v800);--botao-fg:var(--champ-claro)}
-.rotulo.sub{margin:44px 0 0}
-.rotulo.sub+.avulsos{margin-top:18px}
-.tag{display:inline-block;font:500 9.5px/1 var(--sem);letter-spacing:.18em;text-transform:uppercase;padding:6px 9px;border:1px solid var(--rosa);color:var(--rosa-texto);border-radius:100px;white-space:nowrap}
-/* o que tem no club: o hot pilates em cartão escuro, o resto em linhas com "em breve" */
-.servicos{margin-top:18px}
-.servicos>div{display:grid;grid-template-columns:34px 1fr auto;gap:14px;align-items:center;padding:20px 0;border-top:1px solid var(--linha);min-height:84px}
-.servicos>div:nth-child(2){border-top:0}
-.servicos>div svg.i{color:var(--rosa)}
-.servicos>div h3{color:color-mix(in srgb,var(--fg) 82%,transparent)}
-.servicos a.ativo{grid-template-columns:34px 1fr 20px;padding:24px 18px;border-top:0;border-radius:2px;margin-bottom:6px;color:var(--champ-claro);--fg2:#D9B49F;--acento:var(--champ);background:radial-gradient(120% 90% at 100% 0,rgba(114,7,23,.75),transparent 62%),var(--v800)}
-.servicos a.ativo .tag{background:var(--champ);border-color:var(--champ);color:var(--v950);margin-bottom:12px}
-.servicos a.ativo .seta{color:var(--champ)}
-/* aula experimental: cartão em carmim */
-.oferta{margin-top:28px;padding:28px 20px 22px;border-radius:2px;color:var(--champ-claro);background:radial-gradient(130% 90% at 100% 0,#7F0B1D,transparent 60%),#6A0615}
-.oferta small{font:500 11px/1 var(--sem);letter-spacing:.24em;text-transform:uppercase;color:var(--champ)}
-.oferta .valor{font:500 96px/.86 var(--serifa);letter-spacing:-.02em;color:var(--champ);margin:22px 0 18px}
-.oferta .valor span{font-size:30px;letter-spacing:0;vertical-align:top;line-height:1.3;margin-right:8px}
-.oferta p:not(.valor){font-size:15px;line-height:1.5;color:#F3DCCB}
-.oferta .btn{margin-top:22px;padding:0 8px;letter-spacing:.13em;font-size:12px;background:var(--champ);color:var(--v950)}
-.oferta+.passos{margin-top:14px}
-.oferta+.passos li:first-child{border-top:0}
-/* sem plano: avulsa, pacote e vale-presente */
-.avulsos{display:grid;gap:10px}
-.av{padding:22px 20px 16px;background:var(--cartao);border:1px solid var(--linha);border-radius:2px}
-.av h3{font:500 25px/1.1 var(--serifa)}
-.av p{font-size:14px;line-height:1.4;color:var(--fg2);margin-top:6px}
-.av .pe{display:flex;align-items:center;justify-content:space-between;gap:12px;margin-top:16px;padding-top:12px;border-top:1px solid var(--linha)}
-.av b{font:500 30px/1 var(--serifa);white-space:nowrap}
-.av b small{font:400 12.5px/1 var(--sem);color:var(--fg2)}
-.av .pe a{display:inline-flex;align-items:center;gap:8px;min-height:44px;font:500 11px/1 var(--sem);letter-spacing:.14em;text-transform:uppercase;white-space:nowrap}
-.av .pe a svg{width:16px;height:16px}
-.av.presente,.cartao.presente{background:var(--champ);border-color:var(--champ);--linha:rgba(51,4,10,.24);--fg2:#6B3A36}
-.av.presente>svg.i{color:var(--carmim);margin-bottom:12px}
-.cartao.presente .btn.p{background:var(--v800);color:var(--champ-claro)}
-.sec.carmim{padding-bottom:64px}
-.menu-aberto .embreve{margin-top:26px;font-size:14px;line-height:1.5;color:var(--fg2)}
-.menu-aberto .embreve small{display:block;font:500 10px/1 var(--sem);letter-spacing:.22em;text-transform:uppercase;color:var(--rosa);margin-bottom:10px}
-.menu-aberto nav a{font-size:32px}
-.aviso{position:fixed;left:50%;bottom:92px;transform:translateX(-50%);z-index:60;width:max-content;max-width:calc(100% - 32px);padding:13px 18px;border-radius:2px;background:var(--papel);color:var(--tinta);font-size:13.5px;line-height:1.35;text-align:center;box-shadow:0 10px 34px rgba(0,0,0,.4)}
+/* ---- v5: as cores do painel em hierarquia. Creme de base, vinho no topo e no fecho, rosa nos detalhes ---- */
+:root{--v700:#4A040E;--carmim:#720717;--rosa:#AC5D57;--champ:#E0B394;--rosa-texto:#96463F;--papel:#F8F1E8;--areia:#F2E6D9;--tinta-2:#80524C}
+.claro{--cartao:#FCF7F0}
+.claro.areia{--fundo:var(--areia);--cartao:#F9F1E7}
+.sec::after{opacity:.28}
+h1,h2,blockquote{font-weight:400}
+
+/* cabeçalho e barra claros, para a página respirar */
+.topo .marca img.v{display:none}
+.topo.solido{background:rgba(248,241,232,.94);color:var(--tinta)}
+.topo.solido::after{background:var(--fio);box-shadow:none}
+.topo.solido .marca img.c{display:none}
+.topo.solido .marca img.v{display:block}
+.barra{background:rgba(248,241,232,.96);color:var(--tinta)}
+.barra::before{background:var(--fio);box-shadow:none}
+.barra small{color:var(--rosa-texto)}
+.barra .btn{background:var(--v800);color:var(--champ-claro)}
+.barra .wa{border-color:rgba(51,4,10,.28);color:var(--tinta)}
+
+/* primeira tela: poucas palavras, no centro; a foto vira só um vulto */
+.hero{min-height:100svh;justify-content:center;align-items:center;text-align:center;padding:110px 28px 96px;background:radial-gradient(110% 62% at 50% 34%,#4A040E 0,#2C0205 58%,#210104 100%)}
+.hero .foto{opacity:.2;background-position:50% 8%;filter:blur(1px)}
+.hero .foto::before{content:none}
+.hero .foto::after{background:linear-gradient(180deg,rgba(33,1,4,.5) 0,transparent 30%,transparent 55%,#210104 96%)}
+.hero .texto{width:100%;max-width:340px}
+.sobre{letter-spacing:.34em;font-size:10.5px}
+.hero h1{font:400 clamp(46px,14.2vw,60px)/1 var(--serifa);letter-spacing:-.012em;margin:22px 0 20px}
+.hero p.sub{font-size:16px;line-height:1.55;max-width:17.5em;margin:0 auto;color:#E6CBB8}
+.hero .acoes{margin-top:34px}
+.hero .desce{position:absolute;left:50%;bottom:30px;width:1px;height:42px;background:linear-gradient(180deg,rgba(224,179,148,.7),transparent)}
+
+/* faixas: mais ar, título no centro, uma ideia por bloco */
+.sec{padding:96px 28px;text-align:center}
+.rotulo{justify-content:center;font-size:10.5px;letter-spacing:.34em;color:var(--rosa-texto);margin-bottom:22px}
+.rotulo::after{content:none}
+.sec h2{font-size:clamp(32px,9.6vw,38px);line-height:1.08;letter-spacing:-.008em}
+.lead{font-size:15.5px;line-height:1.6;max-width:19.5em;margin:18px auto 0}
+.quadro{margin-top:40px}
+.quadro::after{content:none}
+.mini-rot{font:500 10px/1 var(--sem);letter-spacing:.3em;text-transform:uppercase;color:var(--rosa-texto);margin-top:40px}
+.quadro+.mini-rot{margin-top:36px}
+.chips{display:flex;flex-wrap:wrap;justify-content:center;gap:8px;margin-top:14px}
+.chips+.mini-rot{margin-top:28px}
+.chips span,.chips a{display:inline-flex;align-items:center;gap:10px;height:40px;padding:0 17px;border:1px solid color-mix(in srgb,var(--rosa) 50%,transparent);border-radius:100px;font:400 14.5px/1 var(--sem);color:var(--fg2)}
+.chips a.on{height:46px;padding:0 22px;background:var(--v800);border-color:var(--v800);color:var(--champ-claro);font-size:15px}
+.chips a svg{width:16px;height:16px}
+.link{font-size:11.5px}
+.nota-sec{font-size:13.5px;line-height:1.5;color:var(--fg2);margin-top:20px}
+
+/* hot pilates */
+.fatos{margin-top:36px;border-top:0}
+.fatos div{padding:0 8px;text-align:center}
+.fatos div+div{padding-left:8px}
+.fatos b{font-weight:400;font-size:42px}
+.fatos span{font-size:12px;max-width:9em;margin-inline:auto}
+.conduz{display:flex;flex-direction:column;align-items:center;gap:16px;margin-top:48px;padding-top:0;border-top:0}
+.conduz img{width:84px;height:84px;border-radius:50%;object-position:62% 34%}
+.conduz small{color:var(--rosa-texto);letter-spacing:.3em}
+.conduz h3{font:400 28px/1.05 var(--serifa);margin:10px 0 6px}
+.conduz p{font-size:14px}
+
+/* aula experimental: o único cartão cheio da página */
+.oferta{margin-top:38px;padding:38px 22px 26px;border-radius:2px;color:var(--champ-claro);background:radial-gradient(120% 80% at 50% 0,rgba(114,7,23,.62),transparent 66%),var(--v800)}
+.oferta small{font:500 10.5px/1 var(--sem);letter-spacing:.3em;text-transform:uppercase;color:var(--champ)}
+.oferta .valor{font:400 92px/.9 var(--serifa);letter-spacing:-.02em;color:var(--champ-claro);margin:22px 0 18px}
+.oferta .valor span{font-size:26px;letter-spacing:0;vertical-align:top;line-height:1.5;margin-right:8px;color:var(--champ)}
+.oferta p:not(.valor){font-size:14.5px;line-height:1.55;color:#E6CBB8;max-width:17.5em;margin:0 auto}
+.oferta .btn{margin-top:26px;padding:0 8px;letter-spacing:.13em;font-size:12px;background:var(--champ);color:var(--v950)}
+.passos{margin-top:22px;text-align:left}
+.passos li{padding:20px 0;grid-template-columns:50px 1fr}
+.passos li:first-child{border-top:0}
+.passos li:last-child{border-bottom:0}
+.passos li::before{font-size:26px;color:var(--rosa)}
+.passos h3{font-size:23px}
+.passos p{font-size:14px;margin-top:4px}
+
+/* horários */
+.semana{margin-top:32px;justify-content:flex-start}
+.dia{height:66px;flex-basis:48px;border-radius:100px;gap:6px}
+.dia b{font-size:23px;font-weight:400}
+.datado{margin:30px 0 14px;letter-spacing:.26em;font-size:10.5px}
+.aulas{text-align:left}
+.aula{padding:18px 18px 16px}
+.aula .hora b{font-weight:400}
+
+/* planos e valores */
+.planos{text-align:left;margin-top:36px}
+.planos.sem{margin-top:16px}
+.plano-l{padding:18px 0}
+.plano-l h3{font-size:23px}
+.plano-l p{font-size:13px;margin-top:4px}
+.plano-l .preco{font-size:28px;font-weight:400}
+
+/* depoimento */
+blockquote{font-size:27px;line-height:1.24;max-width:13.5em;margin:0 auto}
+.autora{flex-direction:column;gap:22px;margin-top:28px}
+.depo{padding-top:84px;padding-bottom:84px}
+
+/* dúvidas */
+.duvidas{text-align:left;margin-top:34px}
+.duvidas div{padding:18px 0}
+.duvidas h3{font-size:21px}
+.duvidas p{font-size:14.5px}
+
+/* fecho */
+.fecho{padding:96px 28px 124px}
+.fecho h2{font-size:clamp(34px,10vw,40px)}
+.fecho .local{margin-top:56px;font-size:21px;font-weight:400}
+.fecho .dupla{margin-top:20px}
+.fecho .dupla .btn{height:48px}
+.rodape{margin-top:56px}
+
+/* páginas internas e menu */
+.cabeca{padding:124px 28px 30px}
+.cabeca h1{font:400 44px/1 var(--serifa)}
+.cabeca .lead{font-size:15px}
+.sec.lista{padding-top:0;padding-bottom:120px}
+.abas{margin-top:0}
+.cartoes,.cartao{text-align:left}
+.menu-aberto{text-align:left;padding-top:104px;min-height:100svh}
+.menu-aberto nav a{font:400 34px/1.1 var(--serifa);padding:17px 0}
+.menu-aberto .embreve{margin-top:28px;font-size:14px;line-height:1.5;color:var(--fg2)}
+.menu-aberto .embreve small{display:block;font:500 10px/1 var(--sem);letter-spacing:.3em;text-transform:uppercase;color:var(--rosa-texto);margin-bottom:10px}
+.aviso{position:fixed;left:50%;bottom:92px;transform:translateX(-50%);z-index:60;width:max-content;max-width:calc(100% - 32px);padding:13px 18px;border-radius:2px;background:var(--v800);color:var(--champ-claro);font-size:13.5px;line-height:1.35;text-align:center;box-shadow:0 10px 34px rgba(33,1,4,.3)}
 
 @media(min-width:900px){
   .topo nav a{cursor:pointer}
-  .topo .acoes .btn{display:flex;height:46px;background:var(--champ);color:var(--v950)}
-  .hero h1{font-size:clamp(56px,5.6vw,84px);line-height:.96;margin:22px 0 26px}
-  .hero p.sub{max-width:27em}
-  .hero .foto::after{background:linear-gradient(90deg,#210104 0,rgba(33,1,4,.35) 34%,rgba(33,1,4,.12) 70%),linear-gradient(180deg,rgba(33,1,4,.6) 0,rgba(33,1,4,.1) 26%,rgba(33,1,4,.1) 70%,rgba(33,1,4,.65))}
-  .sec{padding:110px max(56px,calc(50vw - 380px))}
-  .sec h2{font-size:56px}
-  .sec.cabeca{padding-top:160px}
-  .semana,.filtros{margin-inline:0;padding-inline:0}
-  .faixa-foto{margin:-110px calc(-1 * max(56px,50vw - 380px)) 56px;height:420px}
+  .topo .acoes .btn{display:flex;height:44px;background:var(--champ);color:var(--v950)}
+  .topo.solido .acoes .btn{background:var(--v800);color:var(--champ-claro)}
+  .hero{display:flex;min-height:100vh;padding:120px 56px 110px}
+  .hero .foto{position:absolute;inset:0;height:auto;margin:0;background-position:50% 20%;opacity:.16}
+  .hero .foto::after{background:linear-gradient(180deg,rgba(33,1,4,.5) 0,transparent 30%,transparent 60%,#210104 98%)}
+  .hero .texto{max-width:680px;padding:0}
+  .hero h1{font-size:clamp(72px,7vw,104px);margin:28px 0 26px}
+  .hero p.sub{font-size:18px;max-width:22em}
+  .hero .acoes{justify-content:center;margin-top:40px}
+  .sec{padding:132px max(56px,calc(50vw - 330px))}
+  .sec h2{font-size:52px}
+  .lead{font-size:17px;max-width:24em}
+  .sec.cabeca{padding-top:170px;padding-bottom:36px}
+  .cabeca h1{font-size:64px}
+  .sec.lista{padding-top:0}
+  .semana{margin-inline:0;padding-inline:0;justify-content:center}
+  blockquote{font-size:36px}
   .fecho{padding-bottom:70px}
+  .fecho .dupla{max-width:420px;margin-inline:auto}
+  .fecho .btn.p{display:inline-flex;padding:0 38px}
+  .oferta{padding:52px 44px 40px}
+  .oferta .valor{font-size:128px}
+  .oferta .btn{display:inline-flex;padding:0 38px}
   .menu-aberto{min-height:100vh}
   .folha{left:50%;right:auto;bottom:auto;top:50%;width:460px;transform:translate(-50%,-50%);border-radius:14px;padding:28px 32px 32px;max-height:90vh}
   .folha::before{display:none}
   @keyframes sobe{from{transform:translate(-50%,-46%);opacity:.4}}
-  .avulsos{grid-template-columns:repeat(3,1fr)}
-  .av{display:flex;flex-direction:column}
-  .av .pe{margin-top:auto;flex-direction:column;align-items:flex-start;gap:4px}
-  .av p{margin-bottom:18px}
-  .oferta{display:grid;grid-template-columns:auto 1fr;column-gap:44px;align-items:center;padding:40px 44px}
-  .oferta small{grid-column:1/-1}
-  .oferta .valor{font-size:132px;margin:20px 0 6px}
-  .oferta p:not(.valor){grid-column:2;grid-row:2}
-  .oferta .btn{grid-column:2;justify-self:start;padding:0 34px;margin-top:8px}
-  .sec.carmim{padding-bottom:110px}
   .aviso{bottom:40px}
 }
 
@@ -415,7 +482,7 @@ a:focus-visible,button:focus-visible{outline:2px solid #F4D2B4;outline-offset:3p
 </head>
 <body>
 <header class="topo">
-  <a class="marca" data-ir="inicio" aria-label="The Hot Wellness Club, início"><img src="img/logo-nome.png" alt="The Hot Wellness Club" width="1606" height="306"></a>
+  <a class="marca" data-ir="inicio" aria-label="The Hot Wellness Club, início"><img class="c" src="img/logo-nome.png" alt="The Hot Wellness Club" width="1606" height="306"><img class="v" src="img/logo-nome-vinho.png" alt="" width="1606" height="306"></a>
   <nav aria-label="Menu"><a data-rola="s-club">O club</a><a data-rola="s-hot">Hot Pilates</a><a data-ir="horarios">Horários</a><a data-ir="planos">Planos</a></nav>
   <div class="acoes"><a class="entrar">Entrar</a><a class="btn" data-abre>Agendar experimental</a><button type="button" class="abre">Menu<i></i></button></div>
 </header>
@@ -424,169 +491,154 @@ a:focus-visible,button:focus-visible{outline:2px solid #F4D2B4;outline-offset:3p
   <div class="foto"></div>
   <div class="texto">
     <p class="sobre">Wellness club · Aracaju</p>
-    <h1>Um club para o corpo forte <em>e a mente leve.</em></h1>
-    <p class="sub">A atividade principal é o hot pilates: sala aquecida, no máximo 13 alunas por turma e fisioterapeuta em cada aula.</p>
-    <div class="acoes"><a class="btn p" data-abre>Agendar aula experimental</a><a class="btn s" data-ir="horarios">Ver horários com vaga</a></div>
-    <p class="nota">A aula experimental custa R$ 60. Fechou o plano até o dia seguinte, o valor sai da primeira mensalidade.</p>
+    <h1>Corpo forte,<br><em>mente leve.</em></h1>
+    <p class="sub">Hot pilates em sala aquecida, com fisioterapeuta em cada aula.</p>
+    <div class="acoes"><a class="btn p" data-abre>Agendar aula experimental</a><a class="btn s" data-ir="horarios">Ver horários</a></div>
   </div>
-  <div class="pc-faixa"><span class="pisca"></span><small>Próxima turma com vaga</small><b>Quinta, 26 de novembro · 18:20 · Hot Pilates</b><a data-abre>Reservar esta aula →</a></div>
+  <span class="desce" aria-hidden="true"></span>
 </section>
-<div class="proxima"><span class="pisca"></span><div><small>Próxima turma com vaga</small><b>Quinta, 26 nov · 18:20</b></div><a aria-label="Reservar esta aula" data-abre><svg class="i" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12h15M14 7l5 5-5 5"/></svg></a></div>
 
 <section class="sec claro" id="s-club">
-  <p class="rotulo"><b>01</b> O club</p>
+  <p class="rotulo">O club</p>
   <h2>As alunas já chamavam <em>de “o Hot”.</em></h2>
-  <p class="lead">“O Hot é um momento de cuidar de mim”, escreveu uma delas. Agora é o nome do club: um endereço para treinar, cuidar do corpo e ficar mais um pouco depois da aula.</p>
-  <figure class="quadro"><img src="img/recepcao.jpg" alt="Recepção do The Hot Wellness Club, com a logo na parede e luz quente" style="aspect-ratio:16/10" width="1800" height="986" loading="lazy"><figcaption>A recepção do club</figcaption></figure>
-  <p class="rotulo sub">O que tem no club</p>
-  <div class="servicos">
-    <a class="ativo" data-rola="s-hot"><svg class="i" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 5c2.2 2.4 3.3 5 3.3 7.6 0 2.3-1.3 4.4-3.3 5.4-2-1-3.3-3.1-3.3-5.4C8.7 10 9.8 7.4 12 5Z"/><path d="M8.9 10.2C6.6 9.9 4.6 10.3 3 11.4c.6 3.6 3.2 6.2 6.9 6.6"/><path d="M15.1 10.2c2.3-.3 4.3.1 5.9 1.2-.6 3.6-3.2 6.2-6.9 6.6"/><path d="M5 20.5h14"/></svg><div><span class="tag">Aulas abertas</span><h3>Hot Pilates</h3><p>A atividade principal do club. Aulas de 50 minutos em sala aquecida, de segunda a sábado.</p></div><svg class="i seta" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12h15M14 7l5 5-5 5"/></svg></a>
-    <div><svg class="i" viewBox="0 0 24 24" aria-hidden="true"><path d="M7 8v8M4.5 9.5v5M17 8v8M19.5 9.5v5M7 12h10"/></svg><div><h3>Pilates</h3><p>Força e controle, em temperatura ambiente.</p></div><span class="tag">Em breve</span></div>
-    <div><svg class="i" viewBox="0 0 24 24" aria-hidden="true"><path d="M2 12h5l2-5 3.5 10 2.5-7 1.5 2H22"/></svg><div><h3>Recovery</h3><p>Para o corpo descansar entre uma aula e outra.</p></div><span class="tag">Em breve</span></div>
-    <div><svg class="i" viewBox="0 0 24 24" aria-hidden="true"><path d="M3 8.5c2-1.6 4-1.6 6 0s4 1.6 6 0 4-1.6 6 0M3 13c2-1.6 4-1.6 6 0s4 1.6 6 0 4-1.6 6 0M3 17.5c2-1.6 4-1.6 6 0s4 1.6 6 0 4-1.6 6 0"/></svg><div><h3>Massagem</h3><p>Com hora marcada, antes ou depois da aula.</p></div><span class="tag">Em breve</span></div>
-    <div><svg class="i" viewBox="0 0 24 24" aria-hidden="true"><path d="M9.5 4h5v5.5H20v5h-5.5V20h-5v-5.5H4v-5h5.5Z"/></svg><div><h3>Fisioterapia</h3><p>Avaliação e tratamento com fisioterapeuta.</p></div><span class="tag">Em breve</span></div>
-    <div><svg class="i" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 10h11v4.5a4.5 4.5 0 0 1-4.5 4.5h-2A4.5 4.5 0 0 1 5 14.5ZM16 11.5h1.5a2 2 0 0 1 0 4H16M8.5 4c-.8 1 .8 1.7 0 2.8M12 4c-.8 1 .8 1.7 0 2.8"/></svg><div><h3>Café</h3><p>Para chegar antes e sair sem pressa.</p></div><span class="tag">Em breve</span></div>
-  </div>
-  <a class="link" style="margin-top:14px" data-demo>Quero saber quando abrir <svg class="i" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12h15M14 7l5 5-5 5"/></svg></a>
+  <p class="lead">Agora é o nome do club: um lugar para treinar, cuidar do corpo e ficar mais um pouco.</p>
+  <figure class="quadro"><img src="img/recepcao.jpg" alt="Recepção do The Hot Wellness Club, com a logo na parede e luz quente" style="aspect-ratio:16/10" width="1800" height="986" loading="lazy"></figure>
+  <p class="mini-rot">Aulas abertas</p>
+  <div class="chips"><a class="on" data-rola="s-hot">Hot Pilates <svg class="i" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12h15M14 7l5 5-5 5"/></svg></a></div>
+  <p class="mini-rot">Em breve</p>
+  <div class="chips"><span>Pilates</span><span>Recovery</span><span>Massagem</span><span>Fisioterapia</span><span>Café</span></div>
 </section>
 
-<section class="sec escuro" id="s-hot">
-  <p class="rotulo"><b>02</b> Hot Pilates</p>
+<section class="sec claro areia" id="s-hot">
+  <p class="rotulo">Hot Pilates</p>
   <h2>A aula que deu <em>origem ao club.</em></h2>
-  <p class="lead">A sala já está aquecida quando você entra. A luz é vermelha e baixa, a música é alta e as séries não param: força e resistência, sem impacto nas articulações. Os últimos minutos são para desacelerar.</p>
-  <figure class="quadro"><img src="img/sala.jpg" alt="Sala de aula do The Hot, com tapetes em fila e linhas de luz no teto" width="1800" height="995" loading="lazy"><figcaption>A sala aquecida</figcaption></figure>
+  <p class="lead">Sala aquecida, luz baixa e música alta. Força e resistência, sem impacto nas articulações.</p>
+  <figure class="quadro"><img src="img/sala.jpg" alt="Sala de aula do The Hot, com tapetes em fila e linhas de luz no teto" width="1800" height="995" loading="lazy"></figure>
   <div class="fatos">
-    <div><b>13</b><span>alunas por turma, no máximo</span></div>
-    <div><b>50</b><span>minutos, do aquecimento ao relaxamento</span></div>
-    <div><b>1ª</b><span>brasileira certificada pela Inferno Hot Pilates</span></div>
+    <div><b>13</b><span>alunas por turma</span></div>
+    <div><b>50</b><span>minutos de aula</span></div>
+    <div><b>1ª</b><span>brasileira certificada Inferno Hot Pilates</span></div>
   </div>
   <div class="conduz">
     <img src="img/f-adelly.jpg" alt="Adelly Stella sorrindo na sala de aula" width="900" height="1350" loading="lazy">
-    <div><small>Quem conduz</small><h3>Adelly Stella</h3><p>Fisioterapeuta, ensina pilates desde 2017. Conheceu o hot pilates nos quatro anos em que morou na Califórnia e trouxe a aula para Aracaju.</p></div>
+    <div><small>Quem conduz</small><h3>Adelly Stella</h3><p>Fisioterapeuta. Ensina pilates desde 2017.</p></div>
   </div>
 </section>
 
 <section class="sec claro" id="s-primeira">
-  <p class="rotulo"><b>03</b> Primeira aula</p>
+  <p class="rotulo">Primeira aula</p>
   <h2>Comece por <em>uma aula.</em></h2>
   <div class="oferta">
     <small>Aula experimental</small>
     <p class="valor"><span>R$</span>60</p>
-    <p>Uma aula completa de hot pilates, na turma que você escolher. Fechou o plano até o dia seguinte, os R$ 60 saem da primeira mensalidade. Não fechou, não paga mais nada.</p>
+    <p>Fechou o plano até o dia seguinte, o valor sai da primeira mensalidade.</p>
     <a class="btn p" data-abre>Agendar aula experimental</a>
   </div>
   <ol class="passos">
-    <li><div><h3>Escolha o horário</h3><p>Pelo site, com Pix ou cartão. Sem cadastro e sem senha.</p></div></li>
-    <li><div><h3>Venha para a aula</h3><p>Traga toalha de banho e água. Tapete e acessórios são do club. Chegue 5 minutos antes.</p></div></li>
-    <li><div><h3>Decida depois</h3><p>Gostou? O valor da experimental vira desconto no seu plano.</p></div></li>
+    <li><div><h3>Escolha o horário</h3><p>Pelo site, com Pix ou cartão.</p></div></li>
+    <li><div><h3>Venha para a aula</h3><p>Traga toalha de banho e água.</p></div></li>
+    <li><div><h3>Decida depois</h3><p>Não fechou, não paga mais nada.</p></div></li>
   </ol>
 </section>
 
-<section class="sec escuro" id="s-agenda">
-  <p class="rotulo"><b>04</b> Horários</p>
-  <h2>Garanta a sua <em>vaga.</em></h2>
-  <p class="lead">São 13 vagas por turma. Quando enche, abre lista de espera.</p>
-  <div class="semana" data-grade role="tablist" aria-label="Dias"><button type="button" class="dia sel" data-d="0"><small>qui</small><b>26</b><i>2 aulas</i></button><button type="button" class="dia" data-d="1"><small>sex</small><b>27</b><i>1 aula</i></button><button type="button" class="dia" data-d="2"><small>sáb</small><b>28</b><i>3 aulas</i></button><button type="button" class="dia" data-d="3"><small>seg</small><b>30</b><i>3 aulas</i></button><button type="button" class="dia" data-d="4"><small>ter</small><b>01</b><i>3 aulas</i></button><button type="button" class="dia" data-d="5"><small>qua</small><b>02</b><i>3 aulas</i></button><button type="button" class="dia" data-d="6"><small>qui</small><b>03</b><i>2 aulas</i></button></div>
+<section class="sec claro areia" id="s-agenda">
+  <p class="rotulo">Horários</p>
+  <h2>Garanta a <em>sua vaga.</em></h2>
+  <p class="lead">São 13 vagas por turma.</p>
+  <div class="semana" data-grade role="tablist" aria-label="Dias"><button type="button" class="dia sel" data-d="0"><small>qui</small><b>26</b></button><button type="button" class="dia" data-d="1"><small>sex</small><b>27</b></button><button type="button" class="dia" data-d="2"><small>sáb</small><b>28</b></button><button type="button" class="dia" data-d="3"><small>seg</small><b>30</b></button><button type="button" class="dia" data-d="4"><small>ter</small><b>01</b></button><button type="button" class="dia" data-d="5"><small>qua</small><b>02</b></button><button type="button" class="dia" data-d="6"><small>qui</small><b>03</b></button></div>
   <p class="datado" data-datado>Quinta-feira, 26 de novembro</p>
   <div class="aulas" data-lista><article class="aula ">
   <div class="hora"><b>18:20</b><small>50 min</small></div>
-  <div class="info"><h3>Hot Pilates</h3><p>com Adelly · sala aquecida</p></div>
+  <div class="info"><h3>Hot Pilates</h3><p>com Adelly</p></div>
   <a class="mini" data-abre>Reservar</a>
   <div class="vagas"><span style="--p:85%"></span></div><p class="situ">2 vagas</p>
 </article><article class="aula cheia">
   <div class="hora"><b>19:30</b><small>50 min</small></div>
-  <div class="info"><h3>Hot Pilates</h3><p>com Adelly · sala aquecida</p></div>
+  <div class="info"><h3>Hot Pilates</h3><p>com Adelly</p></div>
   <a class="mini fila" data-demo>Entrar na lista</a>
   <div class="vagas"><span style="--p:100%"></span></div><p class="situ">Turma cheia</p>
 </article></div>
-  <a class="link" style="margin-top:22px" data-ir="horarios">Ver a grade completa <svg class="i" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12h15M14 7l5 5-5 5"/></svg></a>
+  <a class="link" style="margin-top:26px" data-ir="horarios">Ver a grade completa <svg class="i" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12h15M14 7l5 5-5 5"/></svg></a>
 </section>
 
 <section class="sec claro" id="s-valores">
-  <p class="rotulo"><b>05</b> Planos e valores</p>
+  <p class="rotulo">Planos e valores</p>
   <h2>Uma, duas ou três <em>vezes por semana.</em></h2>
   <div class="planos">
-    <div class="plano-l"><div><h3>1x por semana</h3><p>4 aulas no mês · horário fixo</p></div><div class="preco"><small>R$ </small>200<small> /mês</small></div></div>
-    <div class="plano-l"><div><h3>2x por semana</h3><p>8 aulas no mês · horário fixo</p></div><div class="preco"><small>R$ </small>340<small> /mês</small></div></div>
-    <div class="plano-l"><div><span class="selo">Mais completo</span><h3>3x por semana</h3><p>12 aulas no mês · horário fixo</p></div><div class="preco"><small>R$ </small>530<small> /mês</small></div></div>
+    <div class="plano-l"><div><h3>1x por semana</h3><p>4 aulas no mês</p></div><div class="preco"><small>R$ </small>200<small> /mês</small></div></div>
+    <div class="plano-l"><div><h3>2x por semana</h3><p>8 aulas no mês</p></div><div class="preco"><small>R$ </small>340<small> /mês</small></div></div>
+    <div class="plano-l"><div><h3>3x por semana</h3><p>12 aulas no mês</p></div><div class="preco"><small>R$ </small>530<small> /mês</small></div></div>
   </div>
-  <p class="lead" style="font-size:14.5px">O horário fica guardado no seu nome. Avisou a falta com 3 horas de antecedência, repõe em outra turma no mesmo mês.</p>
-  <a class="link" style="margin-top:10px" data-ir="planos">Ver os planos em detalhe <svg class="i" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12h15M14 7l5 5-5 5"/></svg></a>
-  <p class="rotulo sub">Sem plano</p>
-  <div class="avulsos">
-    <div class="av"><h3>Aula avulsa</h3><p>Uma aula quando quiser, conforme a vaga.</p><div class="pe"><b><small>R$ </small>60</b><a data-ir="horarios">Ver horários <svg class="i" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12h15M14 7l5 5-5 5"/></svg></a></div></div>
-    <div class="av"><h3>Pacote de 4 aulas</h3><p>Para usar em 30 dias, no horário que tiver vaga.</p><div class="pe"><b><small>R$ </small>220</b><a data-demo>Comprar pacote <svg class="i" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12h15M14 7l5 5-5 5"/></svg></a></div></div>
-    <div class="av presente"><svg class="i" viewBox="0 0 24 24" aria-hidden="true"><path d="M4.5 10.5h15v9h-15ZM3.5 7.5h17v3h-17ZM12 7.5v12M12 7.5c-1.2-2.6-4.6-3.2-4.6-1.4 0 1.4 2.4 1.4 4.6 1.4ZM12 7.5c1.2-2.6 4.6-3.2 4.6-1.4 0 1.4-2.4 1.4-4.6 1.4Z"/></svg><h3>Vale-presente</h3><p>Uma aula para dar de presente, válida por 30 dias.</p><div class="pe"><b><small>R$ </small>60</b><a data-demo>Presentear <svg class="i" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12h15M14 7l5 5-5 5"/></svg></a></div></div>
+  <p class="nota-sec">Horário fixo, com reposição quando você avisa a falta.</p>
+  <p class="mini-rot">Sem plano</p>
+  <div class="planos sem">
+    <div class="plano-l"><div><h3>Aula avulsa</h3><p>Conforme a vaga</p></div><div class="preco"><small>R$ </small>60</div></div>
+    <div class="plano-l"><div><h3>Pacote de 4 aulas</h3><p>Para usar em 30 dias</p></div><div class="preco"><small>R$ </small>220</div></div>
+    <div class="plano-l"><div><h3>Vale-presente</h3><p>Uma aula para dar de presente</p></div><div class="preco"><small>R$ </small>60</div></div>
   </div>
+  <a class="link" style="margin-top:26px" data-ir="planos">Ver em detalhe <svg class="i" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12h15M14 7l5 5-5 5"/></svg></a>
 </section>
 
-<section class="sec carmim">
-  <div class="faixa-foto"></div>
-  <p class="rotulo"><b>06</b> Quem treina, conta</p>
+<section class="sec claro areia depo">
+  <p class="rotulo">Quem treina, conta</p>
   <blockquote>“Comecei querendo me exercitar, mas acabei encontrando um ambiente com meninas extremamente acolhedoras.”</blockquote>
   <div class="autora"><span>Veronica, aluna · 1 de 3</span><span class="passa"><span><svg class="i" viewBox="0 0 24 24" aria-hidden="true"><path d="M20 12H5M10 7l-5 5 5 5"/></svg></span><span><svg class="i" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12h15M14 7l5 5-5 5"/></svg></span></span></div>
 </section>
 
-<section class="sec champ">
-  <p class="rotulo"><b>07</b> Visite</p>
-  <h2>Venha <em>conhecer.</em></h2>
-  <p class="local">Rua Joana de Souza Bonfim, 216<small>Inácio Barbosa · Aracaju, SE<br>Aulas de segunda a sábado</small></p>
-  <div class="dupla"><a class="btn s" data-demo><svg class="i" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 21s6.5-6 6.5-11A6.5 6.5 0 0 0 5.5 10c0 5 6.5 11 6.5 11Z"/><circle cx="12" cy="10" r="2.3"/></svg> Como chegar</a><a class="btn p" data-demo><svg class="i" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3.5a8.5 8.5 0 0 0-7.3 12.8L3.5 20.5l4.3-1.1A8.5 8.5 0 1 0 12 3.5Z"/><path d="M9 8.3c-.6 2.7 3 6.6 6.2 6.5l.8-1.5-2-1-1 .9c-1-.4-1.9-1.4-2.3-2.3l.9-1-1-2Z"/></svg> WhatsApp</a></div>
-</section>
-
 <section class="sec claro">
-  <p class="rotulo"><b>08</b> Dúvidas</p>
+  <p class="rotulo">Dúvidas</p>
   <h2>Antes da <em>primeira aula.</em></h2>
   <div class="duvidas">
-    <div class="aberta"><h3>Nunca fiz pilates. Consigo acompanhar?</h3><p>Consegue. Muita aluna começou no hot pilates sem nunca ter feito pilates. As turmas têm no máximo 13 alunas e a Adelly, que é fisioterapeuta, ajusta cada exercício ao seu nível.</p></div>
+    <div><h3>Nunca fiz pilates. Consigo acompanhar?</h3><p>Consegue. As turmas têm no máximo 13 alunas e a Adelly, que é fisioterapeuta, ajusta cada exercício ao seu nível.</p></div>
     <div><h3>Vou passar mal no calor?</h3><p>A sala é aquecida para o corpo render mais. Você pode pausar e beber água quando precisar.</p></div>
-    <div><h3>O que eu levo?</h3><p>Toalha de banho (obrigatória), garrafinha de água e roupa leve. Tapete e acessórios são do club.</p></div>
-    <div><h3>E se eu precisar faltar?</h3><p>Avisando pelo app com pelo menos 3 horas de antecedência, você ganha uma reposição para usar em outra turma com vaga até o fim do mês.</p></div>
-    <div><h3>Posso ir sem fechar plano?</h3><p>Pode. Tem aula avulsa por R$ 60 e pacote de 4 aulas por R$ 220, para usar em 30 dias nos horários com vaga.</p></div>
-    <div><h3>Quando abrem as outras atividades?</h3><p>Pilates, recovery, massagem, fisioterapia e café ainda não têm data. O aviso sai aqui no site e no Instagram do club.</p></div>
+    <div><h3>O que eu levo?</h3><p>Toalha de banho (obrigatória), água e roupa leve. Tapete e acessórios são do club.</p></div>
+    <div><h3>E se eu precisar faltar?</h3><p>Avisando pelo app com 3 horas de antecedência, você repõe em outra turma com vaga até o fim do mês.</p></div>
+    <div><h3>Quando abrem as outras atividades?</h3><p>Ainda não têm data. O aviso sai aqui no site e no Instagram do club.</p></div>
     <div><h3>Grávida pode fazer?</h3><p>O hot pilates não é indicado durante a gestação.</p></div>
   </div>
 </section>
 
 <section class="sec escuro fecho">
   <img class="th" src="img/logo-chama.png" alt="" width="336" height="459">
-  <h2>Corpo forte, <em>mente leve.</em></h2>
+  <h2>Sua primeira aula <em>começa aqui.</em></h2>
   <a class="btn p" data-abre>Agendar aula experimental</a>
+  <p class="local">Rua Joana de Souza Bonfim, 216<small>Inácio Barbosa · Aracaju, SE</small></p>
+  <div class="dupla"><a class="btn s" data-demo><svg class="i" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 21s6.5-6 6.5-11A6.5 6.5 0 0 0 5.5 10c0 5 6.5 11 6.5 11Z"/><circle cx="12" cy="10" r="2.3"/></svg> Como chegar</a><a class="btn s" data-demo><svg class="i" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3.5a8.5 8.5 0 0 0-7.3 12.8L3.5 20.5l4.3-1.1A8.5 8.5 0 1 0 12 3.5Z"/><path d="M9 8.3c-.6 2.7 3 6.6 6.2 6.5l.8-1.5-2-1-1 .9c-1-.4-1.9-1.4-2.3-2.3l.9-1-1-2Z"/></svg> WhatsApp</a></div>
   <footer class="rodape">
-    <div><h4>O club</h4><a data-rola="s-club">O que tem no club</a><a data-rola="s-hot">Hot Pilates</a><a data-ir="horarios">Horários</a><a data-ir="planos">Planos e valores</a></div>
+    <div><h4>O club</h4><a data-rola="s-club">O club</a><a data-rola="s-hot">Hot Pilates</a><a data-ir="horarios">Horários</a><a data-ir="planos">Planos e valores</a></div>
     <div><h4>Para você</h4><a data-demo>Área da aluna</a><a data-rola="s-valores">Vale-presente</a><a data-demo>WhatsApp</a><a data-demo>@fisioadelly</a></div>
-    <div class="fim"><img src="img/logo-completa.png" alt="The Hot Wellness Club" width="1948" height="446">Wellness club em Aracaju.<br>Termos · Contrato · Privacidade · © 2026</div>
+    <div class="fim"><img src="img/logo-completa.png" alt="The Hot Wellness Club" width="1948" height="446">Termos · Contrato · Privacidade · © 2026</div>
   </footer>
 </section></main>
 <main class="vista" id="v-horarios" hidden>
-<section class="sec escuro cabeca">
+<section class="sec claro cabeca">
   <p class="rotulo">Horários</p>
-  <h1 style="font:500 50px/.98 var(--serifa)">Horários <em>da semana.</em></h1>
-  <p class="lead">Aulas de hot pilates, de segunda a sábado. São 13 vagas por turma.</p>
-  <div class="semana" data-grade role="tablist" aria-label="Dias"><button type="button" class="dia sel" data-d="0"><small>qui</small><b>26</b><i>2 aulas</i></button><button type="button" class="dia" data-d="1"><small>sex</small><b>27</b><i>1 aula</i></button><button type="button" class="dia" data-d="2"><small>sáb</small><b>28</b><i>3 aulas</i></button><button type="button" class="dia" data-d="3"><small>seg</small><b>30</b><i>3 aulas</i></button><button type="button" class="dia" data-d="4"><small>ter</small><b>01</b><i>3 aulas</i></button><button type="button" class="dia" data-d="5"><small>qua</small><b>02</b><i>3 aulas</i></button><button type="button" class="dia" data-d="6"><small>qui</small><b>03</b><i>2 aulas</i></button></div>
+  <h1>Horários <em>da semana.</em></h1>
+  <p class="lead">Hot pilates, de segunda a sábado.</p>
+  <div class="semana" data-grade role="tablist" aria-label="Dias"><button type="button" class="dia sel" data-d="0"><small>qui</small><b>26</b></button><button type="button" class="dia" data-d="1"><small>sex</small><b>27</b></button><button type="button" class="dia" data-d="2"><small>sáb</small><b>28</b></button><button type="button" class="dia" data-d="3"><small>seg</small><b>30</b></button><button type="button" class="dia" data-d="4"><small>ter</small><b>01</b></button><button type="button" class="dia" data-d="5"><small>qua</small><b>02</b></button><button type="button" class="dia" data-d="6"><small>qui</small><b>03</b></button></div>
 </section>
 <section class="sec claro lista">
   <p class="datado" data-datado>Quinta-feira, 26 de novembro</p>
   <div class="aulas" data-lista><article class="aula ">
   <div class="hora"><b>18:20</b><small>50 min</small></div>
-  <div class="info"><h3>Hot Pilates</h3><p>com Adelly · sala aquecida</p></div>
+  <div class="info"><h3>Hot Pilates</h3><p>com Adelly</p></div>
   <a class="mini" data-abre>Reservar</a>
   <div class="vagas"><span style="--p:85%"></span></div><p class="situ">2 vagas</p>
 </article><article class="aula cheia">
   <div class="hora"><b>19:30</b><small>50 min</small></div>
-  <div class="info"><h3>Hot Pilates</h3><p>com Adelly · sala aquecida</p></div>
+  <div class="info"><h3>Hot Pilates</h3><p>com Adelly</p></div>
   <a class="mini fila" data-demo>Entrar na lista</a>
   <div class="vagas"><span style="--p:100%"></span></div><p class="situ">Turma cheia</p>
 </article></div>
-  <p class="lead" style="font-size:14.5px;margin-top:22px">Turma cheia tem lista de espera: quando uma aluna avisa a falta, a vaga vai para a próxima da fila. As outras atividades do club entram na grade quando abrirem.</p>
+  <p class="nota-sec">Turma cheia tem lista de espera.</p>
 </section></main>
 <main class="vista" id="v-planos" hidden>
-<section class="sec escuro cabeca">
+<section class="sec claro cabeca">
   <p class="rotulo">Planos</p>
-  <h1 style="font:500 50px/.98 var(--serifa)">Planos <em>e valores.</em></h1>
-  <p class="lead">Planos de hot pilates com horário fixo toda semana e reposição quando você avisa a falta.</p>
+  <h1>Planos <em>e valores.</em></h1>
+  <p class="lead">Horário fixo, com reposição quando você avisa a falta.</p>
 </section>
-<section class="sec claro lista" style="padding-top:28px">
+<section class="sec claro lista">
   <div class="abas" style="margin-top:0"><span class="sel">Mensal</span><span>Pacotes</span><span>Avulsa</span></div>
   <div class="cartoes" data-grupo="0">
     <div class="cartao ">
@@ -617,16 +669,16 @@ a:focus-visible,button:focus-visible{outline:2px solid #F4D2B4;outline-offset:3p
   </div>
   <div class="cartoes" data-grupo="2" hidden>
     <div class="cartao"><p class="nome">Aula avulsa</p><p class="valor"><small>R$</small>60</p><ul><li><span>Quando</span>Conforme a vaga</li><li><span>Horário fixo</span>Não precisa</li></ul><a class="btn s" data-ir="horarios">Ver horários</a></div>
-    <div class="cartao presente"><p class="nome">Vale-presente</p><p class="valor"><small>R$</small>60</p><ul><li><span>O que é</span>Uma aula de presente</li><li><span>Para usar em</span>30 dias</li></ul><a class="btn p" data-demo>Dar de presente</a></div>
+    <div class="cartao"><p class="nome">Vale-presente</p><p class="valor"><small>R$</small>60</p><ul><li><span>O que é</span>Uma aula de presente</li><li><span>Para usar em</span>30 dias</li></ul><a class="btn s" data-demo>Dar de presente</a></div>
   </div>
-  <p class="lead" style="font-size:14.5px;margin-top:22px">Pagamento por Pix ou cartão, direto pelo site e pela sua área de aluna.</p>
+  <p class="nota-sec">Pagamento por Pix ou cartão.</p>
 </section></main>
 <main class="vista" id="v-menu" hidden>
-<section class="sec escuro menu-aberto">
+<section class="sec claro menu-aberto">
   <nav>
-    <a data-rola="s-club">O club <small>01</small></a><a data-rola="s-hot">Hot Pilates <small>02</small></a><a data-ir="horarios">Horários <small>03</small></a><a data-ir="planos">Planos e valores <small>04</small></a><a data-rola="s-valores">Vale-presente <small>05</small></a>
+    <a data-rola="s-club">O club</a><a data-rola="s-hot">Hot Pilates</a><a data-ir="horarios">Horários</a><a data-ir="planos">Planos e valores</a>
   </nav>
-  <p class="embreve"><small>Em breve no club</small>Pilates · Recovery · Massagem · Fisioterapia · Café</p>
+  <p class="embreve"><small>Em breve</small>Pilates · Recovery · Massagem · Fisioterapia · Café</p>
   <div class="pe">
     <a class="btn p" data-abre>Agendar aula experimental</a>
     <a class="btn s" data-demo>Entrar na área da aluna</a>
@@ -678,10 +730,10 @@ a:focus-visible,button:focus-visible{outline:2px solid #F4D2B4;outline-offset:3p
   <a class="mini ${tipo === 'cheia' ? 'fila' : ''}">${tipo === 'cheia' ? 'Entrar na lista' : 'Reservar'}</a>
   <div class="vagas"><span style="--p:${p}%"></span></div><p class="situ">${vagas}</p>
 </article>`;
-  const lista = (aulaFn, g, d) => g[d].map((x) => aulaFn(x[0], '50 min', 'Hot Pilates', 'com Adelly · sala aquecida', x[1] === 0 ? 'Turma cheia' : x[1] === 1 ? 'Última vaga' : x[1] + ' vagas', Math.round((13 - x[1]) / 13 * 100), x[1] === 0 ? 'cheia' : '')).join('').replace(/<a class="mini ">Reservar<\/a>/g, '<a class="mini" data-abre>Reservar</a>').replace(/<a class="mini fila">/g, '<a class="mini fila" data-demo>');
+  const lista = (aulaFn, g, d) => g[d].map((x) => aulaFn(x[0], '50 min', 'Hot Pilates', 'com Adelly', x[1] === 0 ? 'Turma cheia' : x[1] === 1 ? 'Última vaga' : x[1] + ' vagas', Math.round((13 - x[1]) / 13 * 100), x[1] === 0 ? 'cheia' : '')).join('').replace(/<a class="mini ">Reservar<\/a>/g, '<a class="mini" data-abre>Reservar</a>').replace(/<a class="mini fila">/g, '<a class="mini fila" data-demo>');
   let atual = 'inicio', anterior = 'inicio';
   const topo = $('.topo'), barra = $('.barra'), abre = $('.abre'), fundo = $('.fundo-folha'), folhas = $$('.folha');
-  const ajusta = () => { topo.classList.toggle('solido', atual !== 'inicio' || scrollY > 40); barra.hidden = atual === 'menu' || (atual === 'inicio' && scrollY < 420); };
+  const ajusta = () => { topo.classList.toggle('solido', atual !== 'inicio' || scrollY > 40); barra.hidden = atual === 'menu' || (atual === 'inicio' && scrollY < 520); };
   function mostra(nome) {
     if (!vistas.includes(nome)) nome = 'inicio';
     if (nome !== atual && atual !== 'menu') anterior = atual;
@@ -715,7 +767,7 @@ a:focus-visible,button:focus-visible{outline:2px solid #F4D2B4;outline-offset:3p
   const deps = [
     ['“Comecei querendo me exercitar, mas acabei encontrando um ambiente com meninas extremamente acolhedoras.”', 'Veronica, aluna'],
     ['“O Hot se tornou um momento meu, que melhora minha rotina e meu bem-estar.”', 'Lavínia, aluna'],
-    ['“Com algumas aulas já é possível sentir a mudança no corpo, com pernas mais torneadas e superiores definindo.”', 'Inês, aluna'],
+    ['“Com algumas aulas já é possível sentir a mudança no corpo.”', 'Inês, aluna'],
   ];
   let dep = 0;
   document.addEventListener('click', (e) => {
